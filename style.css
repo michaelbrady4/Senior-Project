@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+  
+  body {
+    background-color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  h1, h2 {
+    font-weight: normal;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.3px;
+  }
+  
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #3d3935;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizeLegibility;
+  }
+  
+  .nav-header{
+    list-style-type: none;
+      margin: 0;
+    padding: 10px;
+      overflow: hidden;
+      background-color: #010e80;
+    display: table;
+    height: 71px;
+      width: 100%;
+  } 
+  
+  .nav-header a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-header a:hover{
+    border-bottom:1px solid white;
+    padding-bottom:4px;
+  }
+  
+  .nav-header .list-of-monuments h2{
+    font-size: 14px;
+    float: left;
+    margin: 18px auto;
+  }
+  
+  .nav-header .page-title h1 {
+    font-size: 18px;
+    text-align: center;
+    margin: 17.75px auto;
+  }
+  
+  .sidebar {
+    overflow: auto;
+    padding: 12px 10px 22px 10px;
+    background-color: whitesmoke;
+    width: 33%;
+    height: 100%;
+    display: block;
+    position: absolute;
+  }
+  
+  .sidebar img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0px 5px 80px 0px;
+  }
+  
+  #location-title {
+    color: #3d3935;
+  }
+  
+  #monument-address {
+    color: #3d3935;
+    padding: 20px 5px 0 0;
+    margin: 0 auto;
+  }
+  
+  #sidebar-text {
+    padding: 20px 5px 20px 0;
+    margin: 0 auto;
+  }
+  
+  #sidebar-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 20px 5px 30px 0px;
+  } 
+  
+  #instruct {
+    margin: 0 auto;
+  }
+  
+  .map {
+    float: right;
+    width: 67%;
+    height: 90vh;
+    object-fit: cover;
+  }
+  
+  .mapboxgl-map {
+    font: 12px/20px Helvetica Neue,Arial,Helvetica,sans-serif;
+    overflow: hidden;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-align: left;
+  }
+  
+  .marker {
+    background-image: url('marker1.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .mapboxgl-popup {
+    max-width: 400px;
+    height: 90px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black; 
+    }
+  
+    .mapboxgl-popup-content {
+      max-width: 400px;
+      height: 90px;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      background-color: white;
+    } 
+  
+    #sidebar-monument {
+      overflow: auto;
+      padding: 12px 10px 22px 10px;
+      background-color: whitesmoke;
+      width: 33%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      display: none;
+      color: #3d3935;
+    }
+  
+    #monument-sidebar-text {
+      padding: 20px 5px 80px 0;
+      margin: 0 auto;
+    }
+  
+    /*
+    #b-button{
+      background-color: whitesmoke;
+      border: 2px solid #010e80;
+      color: black;
+    }
+  
+   */
