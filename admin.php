@@ -2,8 +2,14 @@
 <html>
 
 <?php
+require_once("db.php");
 include 'data.php';
+// Password protect this content
+require_once('protect-this.php');
+$sql = "SELECT * FROM monuments";
+$result = mysqli_query($con,$sql);
 ?>
+
     <head>
         <title>Admin: Monumental Anxiety</title>
         <meta name="viewport" content="initial-scale=1.0">
@@ -13,6 +19,8 @@ include 'data.php';
     <link rel="stylesheet" href="admin_page_style.css">
 
 <body>
+    <h1>MONUMENTAL ANXIETY ADMIN PORTAL</h1>
+    <h2>ADD A MONUMENT</h2>
     <div class="container">
         <form action="" id="signupForm">
             <label for="monument_name">Name of the monument</label>
@@ -33,6 +41,45 @@ include 'data.php';
             <input type="submit" value="Submit" >
         </form>
     </div>
+    <div style = "overflow-y: auto" class = "table">
+        <form name="frmUser" method="post" action="">
+            <table class = "pure-table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+
+    <?php
+        $i=0;
+            while($row = mysqli_fetch_array($result)) {
+             if($i%2==0)
+                $classname="evenRow";
+              else
+                $classname="oddRow";
+    ?>
+                <tr class="<?php if(isset($classname)) echo $classname;?>">
+                    <td><?php echo $row["monument_id"]; ?></td>
+                    <td><?php echo $row["monument_name"]; ?></td>
+                    <td><?php echo $row["monument_description"]; ?></td>
+                    <td><?php echo $row["latitude"]; ?></td>
+                    <td><?php echo $row["longitude"]; ?></td>
+                    <td><?php echo $row["monument_picture"]; ?></td>
+                    <td><a href="edit_monument.php?monument_id=<?php echo $row["monument_id"]; ?>" class="link"><img alt='Edit' title='Edit' src='images/edit.png' width='15px' height='15px' hspace='10' /></a>  <a href="delete_monument.php?monument_id=<?php echo $row["monument_id"]; ?>"  class="link"><img alt='Delete' title='Delete' src='images/delete.png' width='15px' height='15px'hspace='10' /></a></td>
+                </tr>
+    <?php
+        $i++;
+    }
+    ?>
+</table>
+</form>
+</div>
+
+
     <div id="map" class='map'></div>
 
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.js'></script>
