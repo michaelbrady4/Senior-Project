@@ -77,8 +77,13 @@ include 'data.php';
                     .setLngLat([marker.longitude,marker.latitude])
                     .addTo(map);
 
-                el.addEventListener('click', () => {
+                // changes color of clicked marker
+                $('.marker').click(function(){
+                    $('.marker.lastclicked').removeClass('lastclicked');
+                    $(this).addClass('lastclicked');
+                }) 
 
+                el.addEventListener('click', () => {
                     //alert(marker); //this works to show what coordinates you click
                     var location = [marker.longitude,marker.latitude]; // location equals the coordinates you click
                     //alert(location);
