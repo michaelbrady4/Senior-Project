@@ -94,7 +94,7 @@ include 'data.php';
 
                     var sidebarInfo = document.getElementById("sidebar-monument");
                     sidebarInfo.innerHTML = '<h1 id="location-title">' + marker.monument_name + '</h1>' + 
-                        '<img id="sidebar-image" src="./monument_data/' + marker.monument_picture + '"/>' +
+                        '<img id="sidebar-image" src="./uploads/' + marker.monument_picture + '"/>' +
                         /*'<h3 id="monument-address">' + currentFeature.properties.address + '</h3>' + */
                         '<p id="monument-sidebar-text">' + marker.monument_description + '</p>';/* +
                         '<br /><br />' +

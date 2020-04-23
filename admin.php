@@ -14,6 +14,8 @@ $result = mysqli_query($con,$sql);
         <title>Admin: Monumental Anxiety</title>
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.css' type='text/css' rel='stylesheet'>
+        <script src="dropzone.min.js"></script>
     </head>
 
     <link rel="stylesheet" href="admin_page_style.css">
@@ -22,7 +24,6 @@ $result = mysqli_query($con,$sql);
     <h1>MONUMENTAL ANXIETY ADMIN PORTAL</h1>
     <h2>ADD A MONUMENT</h2>
     <div class="container">
-        <form action="" id="signupForm">
             <label for="monument_name">Name of the monument</label>
             <input type="text" id="monument_name" name="monument_name" placeholder="Name">
 
@@ -33,13 +34,12 @@ $result = mysqli_query($con,$sql);
             <input type="text" id="longitude" name="longitude" placeholder="Longitude">
 
             <label for="monument_description">Description</label>
-            <input type="text" id="monument_description" name="monument_description" placeholder="Description">
+            <textarea type="text" class="resize" id="monument_description" name="monument_description" placeholder="Description"></textarea>
 
             <label for="monument_picture">Picture file name (image1.png)</label>
-            <input type="text" id="monument_picture" name="monument_picture" placeholder="image1.png">
+            <form action="upload_pictures.php" class="dropzone"></form> 
 
-            <input type="submit" value="Submit" >
-        </form>
+            <input type="submit" value="Submit" id="submit">
     </div>
     <div style = "overflow-y: auto" class = "table">
         <form name="frmUser" method="post" action="">
@@ -89,6 +89,7 @@ $result = mysqli_query($con,$sql);
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/dropzone.js' type='text/javascript'></script>
 
     <script>
         var geojson = <?= get_monument_attributes() ?>;
@@ -121,15 +122,25 @@ $result = mysqli_query($con,$sql);
 
         }
 
+        Dropzone.autoDiscover = false;
+        Dropzone.prototype.defaultOptions.dictDefaultMessage = "Drop files here or click to upload";
+        var myDropzone = new Dropzone(".dropzone", { 
+            autoProcessQueue: false,
+            parallelUploads: 10 // Number of files process at a time (default 2)
+        });
+
         // passes information typed in to the database
-        $('#signupForm').submit(function(event){
+        $('#submit').click(function(event){
             event.preventDefault();
+            myDropzone.processQueue();
             //var name = $('#name').val(); 
             var monument_name = $('#monument_name').val();
             var latitude = $('#latitude').val();
             var longitude = $('#longitude').val();
             var monument_description = $('#monument_description').val();
-            var monument_picture = $('#monument_picture').val();
+            //var monument_picture = $('#monument_picture').val();
+            var monument_picture = myDropzone.files[0].name;
+            //alert(monument_picture);
             var url = 'data.php?add_location&monument_name=' + monument_name + '&latitude=' + latitude + '&longitude=' + longitude + '&monument_description=' + monument_description + '&monument_picture=' + monument_picture;
             $.ajax({
                 url: url,

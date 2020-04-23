@@ -3,6 +3,7 @@
     margin:0;
     padding:0;
     font-family: Helvetica, Arial, sans-serif;
+    /*background-color: #f2f2f2;*/
 }
 
 input[type=text], select {
@@ -13,6 +14,19 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 15px;
 }
 
 input[type=submit] {
@@ -33,29 +47,29 @@ input[type=submit]:hover {
 
 .container {
     float: left;
+    border: 5px solid grey;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
     margin: 0 auto;
     width: 35%;
-    height: 500px;
     font-size: 20px;
 }
 
 .table {
     float: left;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     background-color: #f2f2f2;
-    padding: 20px;
+    /*padding: 20px;*/
     width: 65%;
-    height: 500px;
+    /*border: 5px solid grey;*/
 }
 
   
 .map {
     display: block;
     float:right;
-    width: 100%;
+    width: 50%;
     height: 50vh;
     margin: 0 auto;
     object-fit: cover;
@@ -64,7 +78,7 @@ input[type=submit]:hover {
 
 table {  
     color: #333;
-    width: 850px; 
+    /*width: 850px; */
     border-collapse: collapse; 
     border-spacing: 0;
     padding-left: 50px; 
@@ -74,6 +88,8 @@ td, th {
     border: 1px solid transparent; /* No more visible border */
     height: 30px; 
     transition: all 0.3s;  /* Simple transition for hover effect */
+    border: 5px solid grey;
+    padding: 5px;
 }
 
 th {  
@@ -99,4 +115,8 @@ h1 {
 }
 h2 {
     padding-left: 100px;
+}
+
+.dropzone{
+    margin: 8px;
 }
