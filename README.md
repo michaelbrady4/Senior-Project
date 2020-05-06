@@ -9,12 +9,25 @@
 6. After making your change, Go to the browser and run this url
  **http://localhost:8080/monumental_anxiety/homepage.php**
 
+## Installation Steps
+sudo apt update #(Only if needed)
+sudo apt upgrade #(Only if needed)
 sudo apt install git
 git clone https://github.com/michaelbrady4/Senior_Project.git
 cd Senior_Project
 cd bin
-chmod +x install.sh
-chmod +x start_xampp.sh
-chmod +x stop_xampp.sh
+chmod +x install.sh start_xampp.sh stop_xampp.sh
 sudo ./install.sh
-sudo./start_xampp
+Follow through the basic set up just by clicking next until it is installed
+#Click not to launch Xampp
+or
+#Click to launch Xampp
+#When greeted with Welcome to XAMPP screen click on tab at top "Manage Serves"
+#Select Apache Web Server from list and then click the "Configure" buttom on the right under the "Start" button
+#Click the white Port box that says "80" and change it to "8080" and then click ok
+#You can then hit the "Start All" button at the bottom of the screen or in the terminal run:
+sudo ./start_xampp
+Move folder into htdocs of xampp
+    # cd ../..
+    # mv Senior_Project ~/opt/lampp/htdocs
+Go to https://localhost/Senior_Project/homepage.php
