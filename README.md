@@ -30,4 +30,12 @@ sudo ./start_xampp
 Move folder into htdocs of xampp
     # cd ../..
     # sudo mv Senior_Project /opt/lampp/htdocs
+Go to https://localhost/dashboard
+Click on tab in the blue nav bar in the top right that says "phpMyAdmin"
+Click on the "New" button 
+Input name "monumental_anxiety" in the Create database box and click create
+Click on the "Import" tab in light grey to the right of the "Export" tab
+Click the "Browse" button and select the file "queries.sql" from the bin in the Senior_Project file that was just moved to /opt/lampp/htdocs # That file path will be /opt/lampp/htdocs/Senior_Project/bin/queries.sql
+Click the "Go" button
+This now successfully populated the database
 Go to https://localhost/Senior_Project/homepage.php
