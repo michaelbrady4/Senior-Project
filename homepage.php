@@ -14,7 +14,7 @@ include 'data.php';
 <body>
     <div class="nav-header">
       <div class="list-of-monuments">
-        <h2><a href="listOfMonuments.html">Monument list</a></h2>
+        <h2><a href="listOfMonuments.php">Monument list</a></h2>
       </div>
       <div class="page-title">
         <h1><a href="homepage.php">Monumental Anxiety</a></h1>
@@ -27,9 +27,9 @@ include 'data.php';
       </p>
       <p id="instruct"><b>Using the map</b></p>
       <p>
-        Click once on a monument marker on the map to see a short excerpt of information about that specific monument. Click twice on it to see the full information on it.
+        Click once on a monument marker on the map to see a short excerpt of information about that specific monument.
       </p>
-      <img src="homepage.jpg" alt="homepage image"/>
+      <img src="./images/homepage.jpg" alt="homepage image"/>
     </div>
     <div id='sidebar-monument'></div>
     <div id='map' class='map'></div>

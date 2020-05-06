@@ -175,6 +175,56 @@
       padding: 20px 5px 80px 0;
       margin: 0 auto;
     }
+
+  .monument-list {
+      color: #333;
+      /*width: 850px; */
+      border-collapse: collapse; 
+      border-spacing: 0;
+      padding-top: 20px;
+      height: 100%;
+      overflow-y: auto;    /* Trigger vertical scroll    */
+      overflow-x: hidden;  /* Hide the horizontal scroll */
+    }
+
+  .monument-list table {  
+      color: #333;
+      /*width: 850px; */
+      border-collapse: collapse; 
+      border-spacing: 0;
+      display: table;
+      margin: 0 auto;
+      text-align: center;
+      
+}
+  
+  .monument-list td, th {  
+      border: 1px solid transparent; /* No more visible border */
+      height: 30px; 
+      transition: all 0.3s;  /* Simple transition for hover effect */
+      border: 5px solid grey;
+      padding: 5px;
+  }
+
+  td, th {  
+    border: 1px solid transparent; /* No more visible border */
+    height: 30px; 
+    transition: all 0.3s;  /* Simple transition for hover effect */
+    border: 5px solid grey;
+    padding: 5px;
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+th {  
+    background: #DFDFDF;  /* Darken header a bit */
+    font-weight: bold;
+}
+
+td {  
+    background: #FAFAFA;
+    text-align: center;
+}
   
     /*
     #b-button{
