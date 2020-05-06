@@ -10,4 +10,5 @@
  **http://localhost:8080/monumental_anxiety/homepage.php**
 
 sudo apt install git
-https://github.com/michaelbrady4/Senior_Project.git
+
+git clone https://github.com/michaelbrady4/Senior_Project.git
