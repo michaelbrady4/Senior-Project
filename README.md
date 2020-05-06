@@ -10,5 +10,8 @@
  **http://localhost:8080/monumental_anxiety/homepage.php**
 
 sudo apt install git
-
 git clone https://github.com/michaelbrady4/Senior_Project.git
+cd Senior_Project
+cd bin
+sudo ./install.sh
+sudo./start_xampp
