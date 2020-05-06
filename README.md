@@ -13,5 +13,8 @@ sudo apt install git
 git clone https://github.com/michaelbrady4/Senior_Project.git
 cd Senior_Project
 cd bin
+chmod +x install.sh
+chmod +x start_xampp.sh
+chmod +x stop_xampp.sh
 sudo ./install.sh
 sudo./start_xampp
