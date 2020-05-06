@@ -29,5 +29,5 @@ or
 sudo ./start_xampp
 Move folder into htdocs of xampp
     # cd ../..
-    # mv Senior_Project ~/opt/lampp/htdocs
+    # sudo mv Senior_Project /opt/lampp/htdocs
 Go to https://localhost/Senior_Project/homepage.php
