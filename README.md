@@ -5,7 +5,7 @@
 2. Install Git and clone repository
     - $ sudo apt install git
     - $ git clone https://github.com/michaelbrady4/Senior_Project.git
-3. Navigate to the cloned project
+3. Navigate to the cloned project and bin
     - $ cd Senior_Project
     - $ cd bin
 4. Make files executable
