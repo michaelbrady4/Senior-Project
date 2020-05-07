@@ -1,6 +1,6 @@
 ## Installation Steps
 1. Updates to system (Only if needed)
-    $ sudo apt update
+    - $ sudo apt update
     $ sudo apt upgrade
 2. Install Git and clone repository
     $ sudo apt install git
