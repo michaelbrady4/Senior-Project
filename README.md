@@ -10,8 +10,9 @@
  **http://localhost:8080/monumental_anxiety/homepage.php**
 
 ## Installation Steps
-sudo apt update #(Only if needed)
-sudo apt upgrade #(Only if needed)
+1. Updates to system (Only if needed)
+    # sudo apt update
+    # sudo apt upgrade
 sudo apt install git
 git clone https://github.com/michaelbrady4/Senior_Project.git
 cd Senior_Project
