@@ -9,9 +9,6 @@
     - Billy Edge
         - Email: wce1@hood.edu@hood.edu
 
-## URL to Private YouTube Video:
-- https://youtu.be/mMwOKO4_LoU
-
 ## Installation Steps
 1. Updates to system (Only if needed)
     - $ sudo apt update
