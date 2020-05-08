@@ -1,3 +1,17 @@
+## Team Information
+- Project Title: Monumental Anxiety
+- Team Name: Team Brady
+- Team Members:
+    - Michael Brady
+        - Email: mb62@hood.edu
+    - Matt Dees
+        - Email: mcd12@hood.edu
+    - Billy Edge
+        - Email: wce1@hood.edu@hood.edu
+
+## URL to Private YouTube Video:
+- https://youtu.be/mMwOKO4_LoU
+
 ## Installation Steps
 1. Updates to system (Only if needed)
     - $ sudo apt update
